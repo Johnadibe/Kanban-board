@@ -29,5 +29,6 @@ const fetchData = async() => {
         displayData(data.categories[i]);
     }
 }
+fetchData();
 
 export default fetchData;
