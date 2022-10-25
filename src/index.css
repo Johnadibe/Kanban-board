@@ -20,10 +20,12 @@
     justify-content: space-around;
   }
   
-  #logo {
-    border-radius: 50%;
+  .image {
+    background-image: url('./images/chef.png');
     height: 80px;
-    cursor: pointer;
+    width: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   .navLinks {
@@ -47,3 +49,8 @@
   .navLinks a:nth-child(1) {
     margin-right: 10px;
   }
+  footer {
+  padding: 15px;
+  margin-top: 50px;
+  border-top: 2px solid gray;
+}
