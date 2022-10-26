@@ -139,6 +139,7 @@ button.comment-btn {
   max-width: 100%;
   line-height: 24px;
 }
+
 .reserve-display {
   grid-column: 1;
 }
@@ -166,6 +167,7 @@ button.comment-btn {
   margin-top: 3px;
   margin-bottom: 4px;
 }
+
 #close-btn {
   width: 5%;
   justify-self: end;
