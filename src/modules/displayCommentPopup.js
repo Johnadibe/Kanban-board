@@ -1,98 +1,59 @@
-let ArrayOfFetchedData;
-let comment_Counter = 0;
-const mainId = document.getElementById("mainId");
-const popCharacter = document.getElementById("overlay");
-const close = () => {
-  popCharacter.style.display = "none";
-  mainId.style.display = "block";
-};
-
-const MealDisplay = async () => {
-  const gettingList = "https://www.themealdb.com/api/json/v1/1/categories.php";
-  const response = await fetch(gettingList);
-  const fetchedData = await response.json();
-  ArrayOfFetchedData = fetchedData;
-};
-MealDisplay();
-
-const displayMeals = (e) => {  
-   {
-    for (let i = 0; i < ArrayOfFetchedData.length; i += 1) {
-      const characterModal = document.createElement("div");
-      characterModal.classList.add("characterModal");
-      const closeBtn = document.createElement("button");
-      closeBtn.setAttribute("id", "btnClose");
-      closeBtn.innerHTML = "X";
-      closeBtn.addEventListener("click", () => {
-        close();
-      });
-
-      characterModal.appendChild(closeBtn);
-
-      const Img = document.createElement("img");
-      Img.classList.add("pictureModal");
-      Img.src = ArrayOfFetchedData.strCategoryThumb;
-      characterModal.appendChild(Img);
-
-      const h = document.createElement("h3");
-      h.innerHTML = ArrayOfFetchedData[i].strCategory;
-      characterModal.appendChild(h);
-
-      const modalDetail = document.createElement("div");
-      modalDetail.classList.add("modalDetail");
-
-      const id = document.createElement("p");
-      id.classList.add("Ffield");
-      id.innerHTML = "ID : " + ArrayOfFetchedData.idCategory;
-      modalDetail.appendChild(id);
-
-      const description = document.createElement("p");
-      description.classList.add("Ffield");
-     // description.innerHTML = "Description : " + ArrayOfFetchedData[i].strCategoryDescription;
-      modalDetail.appendChild(description);
-
-      const display_comments = document.createElement("div");
-      display_comments.classList.add("display-comments");
-      // title Comment counter
-      const CommentTitle = document.createElement("h4");
-      CommentTitle.innerHTML = `Comments ${comment_Counter}`;
-      display_comments.appendChild(CommentTitle);
-
-      // list of comments
-      const commentList = document.createElement("ul");
-      const listItem = document.createElement("li");
-      listItem.innerHTML = `Comment1`;
-      commentList.appendChild(listItem);
-      commentList.appendChild(listItem);
-      display_comments.appendChild(commentList);
-
-      // Form to add comments
-      const formComments = document.createElement("form");
-      const commentName = document.createElement("input");
-      commentName.setAttribute("placeholder", "Your name");
-      commentName.setAttribute("type", "text");
-      const commentInsight = document.createElement("input");
-      commentInsight.setAttribute("placeholder", "Your Insight");
-      commentName.setAttribute("type", "text");
-      commentName.classList.add('btn');
-      commentInsight.classList.add('btn');
-      commentName.setAttribute('id','comment');
-      commentInsight.setAttribute('id','comment');
-
-      const SubmitBtn = document.createElement("button");
-      SubmitBtn.setAttribute("type", "submit");
-      SubmitBtn.classList.add('btn');
-      SubmitBtn.innerHTML = "Comment";
-
-      formComments.appendChild(commentName);
-      formComments.appendChild(commentInsight);
-      formComments.appendChild(SubmitBtn);
-
-      characterModal.appendChild(modalDetail);
-      characterModal.appendChild(display_comments);
-      characterModal.appendChild(formComments);
-      popCharacter.appendChild(characterModal);
-    }
+export default class Meal {
+  constructor() {
+    this.API_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+    this.mealContainer = document.querySelector('.comment-content');
 }
+getMeal = async() => {
+    const res = await fetch(this.API_URL);
+    const data = await res.json().catch((err) => new Error(err));
+    this.mealPopup(data.categories);
 };
-export {displayMeals , MealDisplay };
+mealPopup = (data) => {
+    const seeMeal = document.querySelectorAll('.comment-btn');
+    seeMeal.forEach((item, i) => {
+        item.addEventListener('click', () => {
+            const popupModal = document.createElement('div');
+            popupModal.classList.add = 'comment';
+            popupModal.innerHTML = `
+            <div class="comment-popup">
+        <button id="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="reserve-display">
+            <div class="description">
+                <img src="${data[i].strCategoryThumb}" alt="meal-image">
+                <h3 class="meal-title">${data[i].strCategory}</h3>
+                <p class="meal-description">${data[i].strCategoryDescription}</p>
+                <h3 class="meal-title">Comments</h3>
+                <ul class="list-comments">
+                <li class="meal-description">Comment 1</li>
+                <li class="meal-description">Comment 2</li>
+                </ul>
+                <div>
+                <h3 class="meal-title">Add a comment</h3>
+                <form class= "comment-form">
+                <input type="text" placeholder ="Your Name">
+                <textarea type="text" placehoder ="Your Insight" ></textarea>
+                <button type="submit" class="comment-btn">Comment</button>
+                </form>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+            `;
+            this.mealContainer.appendChild(popupModal);
+            this.closeMeal(popupModal);
+        });
+    });
+};
+
+closeMeal = (popupModal) => {
+    const btnClose = document.querySelectorAll('#close-btn');
+    btnClose.forEach((item) => {
+        item.addEventListener('click', () => {
+            popupModal.remove();
+        });
+    });
+};
+};
