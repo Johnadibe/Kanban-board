@@ -9,6 +9,7 @@ export default class Meal {
     const data = await res.json().catch((err) => new Error(err));
     this.mealPopup(data.categories);
   };
+  
   mealPopup = (data) => {
     const seeMeal = document.querySelectorAll('.comment-btn');
     seeMeal.forEach((item, i) => {
