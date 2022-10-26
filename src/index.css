@@ -26,7 +26,7 @@ header {
 }
 
 .image {
-  background-image: url('./images/chef.png');
+  background-image: url("./images/chef.png");
   height: 80px;
   width: 80px;
   background-size: cover;
@@ -103,6 +103,79 @@ button {
 
 button.comment-btn {
   margin-bottom: 20px;
+}
+
+.comment-popup {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 16px;
+  border: 2px solid #000;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-title {
+  padding: 20px;
+}
+
+.meal-description {
+  text-align: justify;
+  padding: 10px;
+  margin-left: 24px;
+  width: 70%;
+  max-width: 100%;
+  line-height: 24px;
+}
+
+.reserve-display {
+  grid-column: 1;
+}
+
+.list-comments {
+  list-style: none;
+  width: 71%;
+}
+
+.list-comments li {
+  padding: 3px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form input {
+  padding: 3px;
+}
+
+.comment-form textarea {
+  padding: 4px;
+  margin-top: 3px;
+  margin-bottom: 4px;
+}
+
+#close-btn {
+  width: 5%;
+  justify-self: end;
+  border: none;
+}
+
+.fa-xmark {
+  font-size: 25px;
 }
 
 footer {
