@@ -1,20 +1,20 @@
 export default class Meal {
   constructor() {
-    this.API_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
-    this.mealContainer = document.querySelector('.comment-content');
-}
-getMeal = async() => {
+    this.API_URL = "https://www.themealdb.com/api/json/v1/1/categories.php";
+    this.mealContainer = document.querySelector(".comment-content");
+  }
+  getMeal = async () => {
     const res = await fetch(this.API_URL);
     const data = await res.json().catch((err) => new Error(err));
     this.mealPopup(data.categories);
-};
-mealPopup = (data) => {
-    const seeMeal = document.querySelectorAll('.comment-btn');
+  };
+  mealPopup = (data) => {
+    const seeMeal = document.querySelectorAll(".comment-btn");
     seeMeal.forEach((item, i) => {
-        item.addEventListener('click', () => {
-            const popupModal = document.createElement('div');
-            popupModal.classList.add = 'comment';
-            popupModal.innerHTML = `
+      item.addEventListener("click", () => {
+        const popupModal = document.createElement("div");
+        popupModal.classList.add = "comment";
+        popupModal.innerHTML = `
             <div class="comment-popup">
         <button id="close-btn">
             <i class="fa-solid fa-xmark"></i>
@@ -42,18 +42,18 @@ mealPopup = (data) => {
         </div>
     </div>
             `;
-            this.mealContainer.appendChild(popupModal);
-            this.closeMeal(popupModal);
-        });
+        this.mealContainer.appendChild(popupModal);
+        this.closeMeal(popupModal);
+      });
     });
-};
+  };
 
-closeMeal = (popupModal) => {
-    const btnClose = document.querySelectorAll('#close-btn');
+  closeMeal = (popupModal) => {
+    const btnClose = document.querySelectorAll("#close-btn");
     btnClose.forEach((item) => {
-        item.addEventListener('click', () => {
-            popupModal.remove();
-        });
+      item.addEventListener("click", () => {
+        popupModal.remove();
+      });
     });
-};
-};
+  };
+}
