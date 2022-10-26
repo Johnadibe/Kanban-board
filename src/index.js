@@ -1,5 +1,2 @@
-import _ from 'lodash'; // eslint-disable-line
+import _ from 'lodash';
 import './index.css';
-import fetchData from './modules/displaylist.js';
-
-fetchData();
