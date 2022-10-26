@@ -15,12 +15,9 @@ const MealDisplay = async () => {
 };
 MealDisplay();
 
-const displayMeals = (e) => {
-  for (let i = 0; i < ArrayOfFetchedData.length; i += 1) {
-    if (
-      ArrayOfFetchedData[i].strCategory ===
-      e.target.parentNode.children[2].innerHTML
-    ) {
+const displayMeals = (e) => {  
+   {
+    for (let i = 0; i < ArrayOfFetchedData.length; i += 1) {
       const characterModal = document.createElement("div");
       characterModal.classList.add("characterModal");
       const closeBtn = document.createElement("button");
@@ -34,7 +31,7 @@ const displayMeals = (e) => {
 
       const Img = document.createElement("img");
       Img.classList.add("pictureModal");
-      Img.src = ArrayOfFetchedData[i].strCategoryThumb;
+      Img.src = ArrayOfFetchedData.strCategoryThumb;
       characterModal.appendChild(Img);
 
       const h = document.createElement("h3");
@@ -46,12 +43,12 @@ const displayMeals = (e) => {
 
       const id = document.createElement("p");
       id.classList.add("Ffield");
-      id.innerHTML = "ID : " + ArrayOfFetchedData[i].idCategory;
+      id.innerHTML = "ID : " + ArrayOfFetchedData.idCategory;
       modalDetail.appendChild(id);
 
       const description = document.createElement("p");
       description.classList.add("Ffield");
-      description.innerHTML = "Description : " + ArrayOfFetchedData[i].strCategoryDescription;
+     // description.innerHTML = "Description : " + ArrayOfFetchedData[i].strCategoryDescription;
       modalDetail.appendChild(description);
 
       const display_comments = document.createElement("div");
@@ -96,6 +93,6 @@ const displayMeals = (e) => {
       characterModal.appendChild(formComments);
       popCharacter.appendChild(characterModal);
     }
-  }
+}
 };
 export {displayMeals , MealDisplay };

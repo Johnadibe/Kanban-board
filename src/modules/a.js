@@ -38,6 +38,10 @@ const fetchData = async () => {
   const data = await res.json();
   for (let i = 0; i < 15; i += 1) {
     displayData(data.categories[i]);
+    document.getElementById('comment').addEventListener('click', (e) => {
+      open();
+      displayMeals(e);
+    });
   }
 };
 

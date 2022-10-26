@@ -1,6 +1,4 @@
 import './index.css';
-import { fetchData } from './modules/displaylist.js';
+import { fetchData } from './modules/a.js';
 
-window.onload = () => {
-    fetchData();
-};
+  fetchData();
