@@ -106,13 +106,12 @@ button.comment-btn {
 }
 
 .comment-popup {
+  position: absolute;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0%;
+  left: 0%;
   background-color: #fff;
   padding: 16px;
   border: 2px solid #000;
