@@ -3,11 +3,13 @@ export default class Meal {
     this.API_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
     this.mealContainer = document.querySelector('.comment-content');
   }
+
   getMeal = async () => {
     const res = await fetch(this.API_URL);
     const data = await res.json().catch((err) => new Error(err));
     this.mealPopup(data.categories);
   };
+  
   mealPopup = (data) => {
     const seeMeal = document.querySelectorAll('.comment-btn');
     seeMeal.forEach((item, i) => {
