@@ -1,55 +1,111 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    scroll-behavior: smooth;
-  }
-  
-  .flexRow {
-    display: flex;
-    flex-direction: row;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
-  .navbar {
-    justify-content: space-around;
-  }
-  
-  .image {
-    background-image: url('./images/chef.png');
-    height: 80px;
-    width: 80px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .navLinks {
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .navLinks a {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 20px;
-    color: #344563;
-    cursor: pointer;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .navLinks a:nth-child(1) {
-    margin-right: 10px;
-  }
-  footer {
+body {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+header {
+  padding-top: 15px;
+  margin-bottom: 72px;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  justify-content: space-around;
+}
+
+.image {
+  background-image: url('./images/chef.png');
+  height: 80px;
+  width: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navLinks {
+  gap: 10px;
+  align-items: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  color: #344563;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navLinks a:nth-child(1) {
+  margin-right: 10px;
+}
+
+.display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 56px;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-like {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button {
+  display: inline-block;
+  width: 100%;
+  padding: 8px;
+  background: none;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.comment-btn {
+  margin-bottom: 20px;
+}
+
+footer {
   padding: 15px;
   margin-top: 50px;
   border-top: 2px solid gray;

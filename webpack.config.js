@@ -6,12 +6,10 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
+    rules: [{
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader'],
+    }],
   },
   devServer: {
     static: './dist',
@@ -25,7 +23,6 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: '/to-do-list/',
   },
   optimization: {
     runtimeChunk: 'single',
