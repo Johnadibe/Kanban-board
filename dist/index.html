@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal DB</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
@@ -16,23 +18,61 @@
         <div class="navbar flexRow">
             <div class="image"></div>
             <div class="navLinks flexRow">
-                <a href="#">Meal </a>
+                <a href="#">Meal <span class="counter">(20)</span></a>
                 <a href="#">Salad</a>
                 <a href="#">Dessert</a>
             </div>
         </div>
     </header>
-    <!-- Display items section -->
-
+    <main id='mainId'>
         <!-- Display items section -->
-    
-        <div class="display" id="display"></div>
-    
-        <!-- popup -->
 
-        <section id="overlay" class="comment-content">
-           
-        </section>
+        <div class="display" id="display"></div>
+
+        <!-- popup -->
+    </main>
+    <section id="overlay" class="comment-content">
+        <!-- <div class="popup" id="popup">
+            <div class="upperpopup">
+                <div class="figure">
+                    <img src="${image}" id="image" class="img-meal" alt="image meal" width="250">
+                </div>
+                <button class="close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="middlepopup">
+                <div class="middlepopSimpletitles">
+                    <h3 class="detail-title">Name:
+                        <p class="comment-detail">${name}</p>
+                    </h3>
+                    <h3 class="detail-title">Category:
+                        <p class="comment-detail">${category}</p>
+                    </h3>
+                    <h3 class="detail-title">Origin:
+                        <p class="comment-detail">${origin}</p>
+                    </h3>
+                </div>
+                <article class="middlepopupMiddleDetails">
+                    <h3 class="details-title-2">Instruction</h3>
+                    <p class="comment-detail">${info2}</p>
+                </article>
+            </div>
+
+            <article class="popupCommentSection">
+                <h3 class="detail detail3"></h3>
+                <div class="comment-holder" </div>
+            </article>
+
+            <form class="popupform" id="form">
+                <h3 class="detail detail4">Add a comment</h3>
+                <input type="text" class="comment-detail" name="username" id="username" placeholder="Your name" required minlength="10">
+                <input type="text" class="comment-detail" name="insight" id="insight" value=" " placeholder="Your insight" required minlength="3">
+                <button type="submit" class="form-btn" id="comment">Comment</button>
+            </form>
+            </div> -->
+    </section>
 
     <!-- Footer section -->
     <footer>Created by Microverse under CC license</footer>
