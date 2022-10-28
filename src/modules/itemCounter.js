@@ -1,6 +1,6 @@
 const mealCounter = (meal) => {
-    const count = meal.length;
-    return count;
+  const count = meal.length;
+  return count;
 };
 
 export default mealCounter;
