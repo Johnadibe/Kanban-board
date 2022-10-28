@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'El Messiri', sans-serif;
 }
 
 body {
@@ -70,14 +72,18 @@ a:hover {
   margin-bottom: 56px;
 }
 
+.card .img {
+  width: 60%;
+}
+
+.card img {
+  width: 100%;
+}
+
 .name {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
-}
-
-h3 {
-  font-size: 25px;
 }
 
 .likes {
@@ -105,80 +111,137 @@ button.comment-btn {
   margin-bottom: 20px;
 }
 
-.comment-popup {
-  position: absolute;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  top: 0%;
-  left: 0%;
-  background-color: #fff;
-  padding: 16px;
-  border: 2px solid #000;
-  z-index: 10;
-  width: 100%;
-  height: auto;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.meal-title {
-  padding: 20px;
-}
-
-.meal-description {
-  text-align: justify;
-  padding: 10px;
-  margin-left: 24px;
-  width: 70%;
-  max-width: 100%;
-  line-height: 24px;
-}
-
-.reserve-display {
-  grid-column: 1;
-}
-
-.list-comments {
-  list-style: none;
-  width: 71%;
-}
-
-.list-comments li {
-  padding: 3px;
-}
-
-.comment-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.comment-form input {
-  padding: 3px;
-}
-
-.comment-form textarea {
-  padding: 4px;
-  margin-top: 3px;
-  margin-bottom: 4px;
-}
-
-#close-btn {
-  width: 5%;
-  justify-self: end;
-  border: none;
-}
-
-.fa-xmark {
-  font-size: 25px;
-}
-
 footer {
   padding: 15px;
   margin-top: 50px;
   border-top: 2px solid gray;
+}
+
+.comment-content {
+  color: black;
+  text-align: justify;
+  width: 90%;
+  border: 2px solid #000;
+}
+
+.popup {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #fff;
+}
+
+.close-btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  float: right;
+  position: relative;
+  margin-top: 3%;
+  font-weight: 900;
+  color: #000;
+  cursor: pointer;
+}
+
+.popup-top {
+  display: flex;
+  width: 90%;
+  border: none;
+  max-width: 100%;
+}
+
+.img-meal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 90%;
+  margin-top: 5%;
+}
+
+.img-meal-container img {
+  height: 100vh;
+  margin-bottom: 5rem;
+}
+
+.detail {
+  display: contents;
+  font-weight: 500;
+}
+
+.popup-description {
+  display: flex;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  margin-left: 11%;
+  width: 50%;
+  max-width: 100%;
+  text-align: justify;
+  padding: 4px;
+  margin-bottom: 3rem;
+}
+
+.desc-title {
+  margin-bottom: 0.6rem;
+}
+
+#spanh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.comment-date {
+  display: flex;
+  margin-left: 11%;
+}
+
+.popup_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-4 {
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+#username,
+#insight {
+  display: block;
+  padding: 1rem;
+  margin: 1rem;
+  border: 4px solid black;
+  width: 20%;
+  margin-left: 11%;
+}
+
+#insight {
+  width: 30%;
+  height: 40vh;
+}
+
+#comment {
+  height: 13vh;
+  box-shadow: 10px 16px;
+  width: 20%;
+  margin-left: 11%;
+  border: 3px solid #000;
+  margin-bottom: 20rem;
+}
+
+.comment-btn, .reservation-btn {
+  box-shadow: 10px 8px;
+  border: 3px solid #000;
 }
