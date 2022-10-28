@@ -5,11 +5,33 @@ const getMealList = async(API_URL) => {
     return listMeal;
 };
 
-const displayData = (data) => {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
- <img src="${data.strCategoryThumb}" alt="card-image">
+const API_URL = 'https://www.themealdb.com/api/json/v1/1/search.php?s';
+
+const getMealData = async() => {
+    const arr = [];
+    const mealList = await getMealList(`${API_URL}`);
+    mealList.forEach((item) => {
+        const newObjArr = {
+            id: item.idMeal,
+            image: item.strMealThumb,
+            name: item.strMeal,
+            category: item.strCategory,
+            origin: item.strArea,
+            cookingInstruction: item.strInstructions,
+        };
+        arr.push(newObjArr);
+    });
+    return arr;
+};
+
+const displayMeals = async(container) => {
+    const meals = await getMealData();
+    meals.forEach((meal) => {
+        const mealCard = `
+    <div class="card">
+    <div class="img">
+ <img src="${meal.image}" alt="${meal.image}">
+    </div>
             <div class="content">
                 <div class="name">
                     <h3>${meal.name}</h3>
@@ -21,16 +43,9 @@ const displayData = (data) => {
               <button class="comment-btn" data-id="${meal.id}">Comments</button>
           <button class="reservation-btn" data-id="${meal.id}">Reservations</button>
             </div>
-            `;
-    cardsContainer.appendChild(card);
+            </div>`;
+        container.innerHTML += mealCard;
+    });
 };
 
-const fetchData = async() => {
-    const res = await fetch(`${API_URL}`);
-    const data = await res.json();
-    for (let i = 0; i < 15; i += 1) {
-        displayData(data.categories[i]);
-    }
-};
-
-export default fetchData;
+export default displayMeals;
