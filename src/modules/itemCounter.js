@@ -1,6 +1,6 @@
-const getNumberCategory = (category) => {
-  const count = category.length;
-  return count;
+const mealCounter = (meal) => {
+    const count = meal.length;
+    return count;
 };
 
-export default getNumberCategory;
+export default mealCounter;
