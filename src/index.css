@@ -70,6 +70,14 @@ a:hover {
   margin-bottom: 56px;
 }
 
+.card .img {
+  width: 60%;
+}
+
+.card img {
+  width: 100%;
+}
+
 .name {
   display: flex;
   justify-content: space-between;
