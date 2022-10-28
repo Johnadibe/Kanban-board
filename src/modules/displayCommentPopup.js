@@ -2,6 +2,7 @@ import { getMealData } from "./displaylist.js";
 import comments from "./comment.js";
 import count from "./commentCounter.js";
 
+
 const commentContent = document.querySelector('.comment-content');
 
 const getInfo = async(id) => {
@@ -128,10 +129,10 @@ const displayComment = async(id, image, name, category, origin, data) => {
     const insight = document.createElement('input');
     insight.setAttribute('name', 'insight');
     insight.setAttribute('class', 'detail');
-    insight.setAttribute('value', ' ');
+    //insight.setAttribute('value', ' ');
     insight.setAttribute('id', 'insight');
     insight.setAttribute('minlength', '1');
-    insight.setAttribute('placeholder', 'Your name');
+    insight.setAttribute('placeholder', 'Your Insight');
     insight.setAttribute('required', true);
     insight.setAttribute('type', 'text');
     const formbutton = document.createElement('button');
