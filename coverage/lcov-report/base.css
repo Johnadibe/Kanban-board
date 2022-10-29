@@ -18,8 +18,8 @@ body {
 }
 
 *,
-*::after,
-*::before {
+*:after,
+*:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -44,7 +44,7 @@ pre {
 }
 
 a {
-    color: #0074d9;
+    color: #0074D9;
     text-decoration: none;
 }
 
@@ -96,7 +96,7 @@ a:hover {
     display: block;
 }
 
-.clearfix::after {
+.clearfix:after {
     content: '';
     display: block;
     height: 0;
@@ -108,13 +108,13 @@ a:hover {
     float: left;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width:640px) {
     .col3 {
         width: 100%;
         max-width: 100%;
     }
     .hide-mobile {
-        display: none !important;
+        display: none!important;
     }
 }
 
@@ -131,7 +131,7 @@ a:hover {
     font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     font-size: 10px;
     color: #555;
-    background: #e8e8e8;
+    background: #E8E8E8;
     padding: 4px 5px;
     border-radius: 3px;
     vertical-align: middle;
@@ -288,18 +288,18 @@ table.coverage td span.cline-any {
 .red.solid,
 .status-line.low,
 .low .cover-fill {
-    background: #c21f39;
+    background: #C21F39
 }
 
 .low .chart {
-    border: 1px solid #c21f39;
+    border: 1px solid #C21F39
 }
 
 .highlighted,
 .highlighted .cstat-no,
 .highlighted .fstat-no,
 .highlighted .cbranch-no {
-    background: #c21f39 !important;
+    background: #C21F39 !important;
 }
 
 
@@ -309,7 +309,7 @@ table.coverage td span.cline-any {
 .fstat-no,
 .cbranch-no,
 .cbranch-no {
-    background: #f6c6ce;
+    background: #F6C6CE
 }
 
 
@@ -317,7 +317,7 @@ table.coverage td span.cline-any {
 
 .low,
 .cline-no {
-    background: #fce1e5;
+    background: #FCE1E5
 }
 
 
@@ -325,14 +325,14 @@ table.coverage td span.cline-any {
 
 .high,
 .cline-yes {
-    background: rgb(230, 245, 208);
+    background: rgb(230, 245, 208)
 }
 
 
 /* medium green */
 
 .cstat-yes {
-    background: rgb(161, 215, 106);
+    background: rgb(161, 215, 106)
 }
 
 
@@ -340,11 +340,11 @@ table.coverage td span.cline-any {
 
 .status-line.high,
 .high .cover-fill {
-    background: rgb(77, 146, 33);
+    background: rgb(77, 146, 33)
 }
 
 .high .chart {
-    border: 1px solid rgb(77, 146, 33);
+    border: 1px solid rgb(77, 146, 33)
 }
 
 
@@ -386,7 +386,7 @@ span.cline-neutral {
 }
 
 .coverage-summary td.empty {
-    opacity: 0.5;
+    opacity: .5;
     padding-top: 4px;
     padding-bottom: 4px;
     line-height: 1;

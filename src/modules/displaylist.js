@@ -41,7 +41,7 @@ const displayMeals = async (container) => {
                     </div>
                 </div>
               <button class="comment-btn" data-id="${meal.id}" onClick="commentClick([${meal.id}, '${meal.image}', '${meal.name}', '${meal.category}', '${meal.origin}'])">Comments</button>
-          <button class="reservation-btn" data-id="${meal.id}">Reservations</button>
+          <button class="reservation-btn" data-id="${meal.id}" onClick="reserveClick([${meal.id}, '${meal.image}', '${meal.name}', '${meal.category}', '${meal.origin}'])">Reservations</button>
             </div>
             </div>`;
     container.innerHTML += mealCard;
