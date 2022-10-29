@@ -40,7 +40,7 @@ const displayMeals = async (container) => {
                         <p class="likes-info" data-id="${meal.id}">0 Likes</p>
                     </div>
                 </div>
-              <button class="comment-btn" data-id="${meal.id}">Comments</button>
+              <button class="comment-btn" data-id="${meal.id}" onClick="commentClick([${meal.id}, '${meal.image}', '${meal.name}', '${meal.category}', '${meal.origin}'])">Comments</button>
           <button class="reservation-btn" data-id="${meal.id}">Reservations</button>
             </div>
             </div>`;
@@ -48,4 +48,4 @@ const displayMeals = async (container) => {
   });
 };
 
-export default displayMeals;
+export { getMealData, displayMeals };
