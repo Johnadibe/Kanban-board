@@ -11,6 +11,7 @@ const comments = (comment, data) => {
     strong.innerText = `${dataId.creation_date}`;
     const commentDetail = document.createElement('p');
     commentDetail.setAttribute('class', 'comment-detail');
+    commentDetail.setAttribute('id', 'comment-detail');
     commentDetail.innerText = `${dataId.username}: ${dataId.comment}`;
     commentDate.appendChild(strong);
     commentDate.appendChild(commentDetail);

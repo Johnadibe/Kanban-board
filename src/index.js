@@ -3,11 +3,12 @@ import './index.css';
 import { displayMeals } from './modules/displaylist.js';
 import { addLike, displayLike } from './modules/addLike.js';
 import mealCounter from './modules/itemCounter.js';
-
 import displayComment from './modules/displayCommentPopup.js';
+import displayReservation from './modules/displayReservePopup.js';
 
 const cardsContainer = document.querySelector('.display');
 const commURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/pwxi6JBpjAwLosQxiICj/comments';
+const resURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/pwxi6JBpjAwLosQxiICj/reservations';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await displayMeals(cardsContainer);
@@ -41,4 +42,13 @@ const commentClick = async (meals) => {
   document.body.classList.add('vertical-scroll');
 };
 
+//
+const reserveClick = async (meals) => {
+  const [id, image, name, category, origin] = meals;
+  await displayReservation(id, image, name, category, origin, resURL);
+  const modalpopup = document.querySelector('.popup');
+  modalpopup.classList.add('hidden');
+  document.body.classList.add('vertical-scroll');
+};
 window.commentClick = commentClick;
+window.reserveClick = reserveClick;
