@@ -5,7 +5,7 @@ The 2 sections We added to build for this project are:
 - A home page showing a list of items that you can "like."
 - A popup window with more data about an item that you can use to comment on it or reserve it for a period of time.
 
-#objectives:
+## Objectives:
 -Use JavaScript to make websites dynamic and build basic single page apps.
 -Use ES6 syntax.
 -Use ES6 modules.
@@ -21,6 +21,14 @@ The 2 sections We added to build for this project are:
 -Understand and use JSON.
 -Make JavaScript code asynchronous.
 -Perform a code review for a team member.
+
+## Technologies 
+- HTML
+- CSS
+- JavaScript
+- WEBPACK
+- JEST
+- VISUAL STUDIO CODE
 
 ## Live Demo (if available)
 github repo link 
@@ -62,7 +70,7 @@ url for online version of portfolio url : https://johnadibe.github.io/Kanban-boa
 
 ## Authors
 
-👤 **Manar ALomari**
+👤 **John Adibe**
 
 - GitHub: [@John Adibe](https://github.com/Johnadibe))
 
@@ -75,7 +83,7 @@ url for online version of portfolio url : https://johnadibe.github.io/Kanban-boa
 
 - LinkedIn:[ Manar Alomari](https://www.linkedin.com/in/manar-alomari-b509ab107/))
 
-👤 **Manar ALomari**
+👤 **Masouma Modarresi**
 
 - GitHub: [@Masouma864](https://github.com/Masouma864))
 
