@@ -3,7 +3,7 @@ import './index.css';
 import { displayMeals } from './modules/displaylist.js';
 import { addLike, displayLike } from './modules/addLike.js';
 import mealCounter from './modules/itemCounter.js';
-//
+
 import displayComment from './modules/displayCommentPopup.js';
 
 const cardsContainer = document.querySelector('.display');
