@@ -5,10 +5,22 @@ The 2 sections We added to build for this project are:
 - A home page showing a list of items that you can "like."
 - A popup window with more data about an item that you can use to comment on it or reserve it for a period of time.
 
-#Built With
--HTML 
--Css
--JavaScript and ES6 modules
+#objectives:
+-Use JavaScript to make websites dynamic and build basic single page apps.
+-Use ES6 syntax.
+-Use ES6 modules.
+-Use callbacks and promises.
+-Use webpack.
+-Apply JavaScript best practices and language style guides in code.
+-Use AAA pattern for unit tests.
+-Write units tests for a JavaScript app.
+-Follow Gitflow.
+-Solve simple git conflicts.
+-Send and receive data from an API.
+-Use API documentation.
+-Understand and use JSON.
+-Make JavaScript code asynchronous.
+-Perform a code review for a team member.
 
 ## Live Demo (if available)
 github repo link 
