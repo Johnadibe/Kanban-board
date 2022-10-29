@@ -241,7 +241,8 @@ article {
   margin-bottom: 20rem;
 }
 
-.comment-btn, .reservation-btn {
+.comment-btn,
+.reservation-btn {
   box-shadow: 10px 8px;
   border: 3px solid #000;
 }
