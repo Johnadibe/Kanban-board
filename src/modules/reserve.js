@@ -11,6 +11,7 @@ const reserves = (reserve, data) => {
     bold.innerText = `${dataId.date_start} - ${dataId.date_end}`;
     const reserveDetail = document.createElement('p');
     reserveDetail.setAttribute('class', 'reserve-detail');
+    reserveDetail.setAttribute('id', 'reserve-detail');
     reserveDetail.innerText = `${dataId.username}`;
     reserveDate.appendChild(bold);
     reserveDate.appendChild(reserveDetail);
